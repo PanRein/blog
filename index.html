@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Notes</h1>
+
+  <ul class="note-list">
+    {% for note in site.posts %}
+      <li>
+        <span class="note-meta">{{ note.date | date: "%b %-d, %Y" }}</span>
+        <h2>
+          <a class="note-link" href="{{ note.url | prepend: site.baseurl }}">{{ note.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
